@@ -16,7 +16,7 @@ const EmployeeList = () => {
   const handleDelete = async (id) => {
     try {
       const employee = await axios.get(
-        `http://localhost:4000/api/v1/employee/getdetails/${id}`
+        `https://employee-management-p9mr.onrender.com/api/v1/employee/getdetails/${id}`
       );
 
       if (!employee.data) {
@@ -24,7 +24,7 @@ const EmployeeList = () => {
         return;
       }
 
-      await axios.delete(`http://localhost:4000/api/v1/employee/delete/${id}`);
+      await axios.delete(`https://employee-management-p9mr.onrender.com/api/v1/employee/delete/${id}`);
       toast.success("Employee deleted successfully");
 
       setEmployees((prevEmployees) =>
@@ -39,7 +39,7 @@ const EmployeeList = () => {
     const fetchEmployees = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4000/api/v1/employee/getall",
+          "https://employee-management-p9mr.onrender.com/api/v1/employee/getall",
           { withCredentials: true }
         );
         setEmployees(response.data);

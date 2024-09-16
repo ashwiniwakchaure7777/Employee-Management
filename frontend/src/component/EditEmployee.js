@@ -24,7 +24,7 @@ const EditEmployee = () => {
     // Fetch the employee data by ID and pre-fill the form
     const fetchEmployee = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/api/v1/employee/getdetails/${id}`);
+        const response = await axios.get(`hhttps://employee-management-p9mr.onrender.com/api/v1/employee/getdetails/${id}`);
         console.log(response);
         const { name, email, phone, gender, designation, course } = response.data.employee;
         setFormData({

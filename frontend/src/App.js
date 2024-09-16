@@ -13,11 +13,11 @@ import EditEmployee from "./component/EditEmployee.js";
 const App = () => {
 
   const {isAuthenticated, setIsAuthenticated, setAdmin} = useContext(Context);
-
+//http://localhost:4000/api/v1/admin/adminpanel
   useEffect(()=>{
     const fetchUser = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/api/v1/admin/adminpanel",{withCredentials: true});
+        const response = await axios.get("https://employee-management-p9mr.onrender.com/api/v1/admin/adminpanel",{withCredentials: true});
         setIsAuthenticated(true);
         setAdmin(response.data.user);
       } catch (error) {

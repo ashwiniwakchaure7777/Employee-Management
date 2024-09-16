@@ -54,7 +54,7 @@ const CreateEmployee = () => {
         form.append("employeeAvatar", formData.employeeAvatar);
 
       const response = await axios.post(
-        "http://localhost:4000/api/v1/employee/createnew",
+        "https://employee-management-p9mr.onrender.com/api/v1/employee/createnew",
         form,
         {
           withCredentials: true,
